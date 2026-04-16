@@ -1,1 +1,0 @@
-A high-fidelity, responsive Trek Bikes clone built with Vanilla HTML5 and CSS3. Features a multi-page setup, immersive video headers, and professional UI design.
