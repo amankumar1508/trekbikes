@@ -1,0 +1,965 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #474747;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    gap: 0;
+    border: px solid black;
+    
+}
+
+.bignav{
+    width: 100vw;
+    height:12.1vh;
+    position: sticky;
+    top: 0;
+    background-color: rgb(26, 48, 48);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+.nav{
+   border: 1px solid black;
+    height: 5.1vh;
+    width: 100%;
+    background-color:#474747;
+    padding:0 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+.navpart1{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.navpart1-1 svg{
+    height: 2vh;
+    width: 6vw;
+}
+
+.navpart2{
+    display: flex;
+    gap: 1vw;
+}
+
+.navpart2-1 img{
+    height: 3vh;
+    border-radius: 11vw;
+}
+.navpart2-2 img{
+    height: 3vh;
+    fill: azure;
+    border-radius: 11vw;
+    filter: invert(1) brightness(2);
+}
+
+.nav2{
+    height: 7vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    justify-content: space-between;
+    padding: 0 1vw;
+} 
+
+.nav2 img{
+    filter: invert(1) brightness(2);
+}
+
+.nav2-2{
+    display: flex;
+    gap: 1vw;
+    font-size: 1vw;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.underline{
+    text-decoration: none;
+    color: aliceblue;
+    transition: all .5s ease-in-out;
+      /* text-decoration-color: red; */
+   
+}
+
+.underline:hover{
+  
+    text-decoration:underline red 1px;
+    text-underline-offset: .7vw;
+    transform: translateY(2px);
+}
+
+/* Hide hamburger menu by default */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+input{
+    background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat 1vw center;
+    background-size: 1.3vw;
+    height: 4.1vh;
+    display: flex;
+    justify-content: safe;
+    align-items: center;
+    text-align: center;
+    color: rgb(234, 237, 240);
+    font-size: 1vw;
+    filter: invert(1) brightness(2);
+    text-align: center;
+    outline: none;
+    border: 1px solid rgb(125, 59, 59);
+    width: 9vw;
+}
+
+input:hover{
+    background-color: aliceblue;
+    color: rgb(239, 237, 237);
+    filter: none;
+}
+
+.header{
+    width: 100.1vw;
+    margin-bottom: 17px;
+    /* height: 491vh; */
+    /* border: 2px solid rgb(156, 26, 26); */
+    flex-wrap: wrap;
+    height: 89vh;
+}
+
+/* video{
+    display: flex;
+    width: 100%;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container{
+    position: relative;
+}
+.invideo{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #c9b0b0;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.invideo button{
+   width: 14vw;
+   height: 5.5vh;
+   border-radius: 1vw;
+   outline: none;
+   border: none;
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+.invideo button:hover{
+     width: 14vw;
+   height: 5.5vh;
+   border-radius: 1vw;
+   outline: none;
+   border: none;
+   font-weight: bold;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+.all{
+    font-size: 3rem;
+}
+.year{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+.head2{
+    background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/marqueeBG-century-challenge-pune");
+    height: 40rem;
+    width: 90rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 2vw;
+    background-repeat: no-repeat;
+}
+
+.head2 img{
+   height: 50vh;
+}
+
+.head3{
+    background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/marquee-Randonneur-24");
+    height: 30rem;
+    width: 90rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(212, 226, 241);
+    font-size: 3vw;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.border{
+    border: 1px solid black;
+    background-color: pink;
+    height: 3rem;
+    width: 11rem;
+    font-size:1.8rem;
+    font-weight: lighter;
+    color: black;
+    border-radius: .6rem;
+    background-position: center;
+}
+
+.head4{
+    background-position: center;
+    background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/2019-05-08_Precal_Lifestyle_Shoot939");
+    width: 90rem;
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pre{
+    font-size: 3rem;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.mem{
+    color: aliceblue;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.see{
+    height: 6vh;
+    width: 15vw;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(219, 221, 224); */
+/* }
+
+.head5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90rem;
+    background-position: center;
+    height: 50rem;
+    background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/JB-Sustainability_homepage");   
+    background-repeat: no-repeat;
+} */
+
+/* .OUR{  
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+.TREK{
+    font-size: 1.7rem;
+    color: white;
+}
+
+.WATCH{
+    height: 7VH;
+    width: 10VW;
+    background-color: aliceblue;
+    font-size: 1rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: .4rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+
+.head5{
+    /* background-color: #ce1b2c; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 51vh;
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: aqua;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/TK20_WEB_Home_marquee_ROW_IG5v2"); */
+}
+
+.head6{
+    background-color: #fff8f9;
+    display: flex;
+  
+   flex-direction: column;
+    width: 90rem;
+    height:46vh;
+ 
+   
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/TK20_WEB_Home_marquee_ROW_IG5v2"); */
+      color: #474747;
+      display: flex;
+}
+
+.home{
+    /* border: 1px solid black; */
+       display: flex;
+        height: 10vh;
+         width: 100%;
+         font-weight: bold;
+
+      
+}
+.home2{
+     /* border: 1px solid rgb(201, 8, 8); */
+       display: flex;
+        height: 30vh;
+         width: 100%;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         font-size: .9vw;
+         font-weight: none;
+         color: #b39393;
+}
+
+
+.click{
+    /* border: 1px solid blanchedalmond; */
+    
+    width: 71.2vw;
+    display: flex;
+    gap: .4em;
+    height: 4vh;
+    align-items: center;
+   
+}
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4h;
+  border-radius: 1rem;
+  width: 1.4vw;
+ 
+}
+.arrow img{
+    /* border:2px solid  #474747; */
+   width: 6vw;
+     height: 3vh;
+    opacity: 40%;
+      border-radius: 1rem;
+
+
+}
+
+.home img{
+    height: 2.9vh;
+}
+.india{
+    color: #6c5a5a;
+}
+
+.footer{
+    /* border: 1px solid black; */
+    height: 130vh;
+    background-color: #474747;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer1{
+    /* border: 1px solid black; */
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sign{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.4rem;
+    color: white;
+}
+
+.get{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    color: rgb(157, 114, 114);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Join{
+    width: 28.2vw;
+    height: 7.4vh;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid rgb(143, 129, 129); */
+}
+
+.Join input{
+    background-image: none;
+    /* border: 1px solid rgb(225, 195, 195); */
+    width: 28vw;
+    background-color: none;
+}
+
+.Join input:hover{
+    background-color: transparent;
+    color: whitesmoke;
+    /* border: 1px solid rgb(211, 197, 197); */
+}
+
+.join1{
+    display: flex;
+}
+
+button{
+    height: 4vh;
+    width: 4vw;
+    cursor: pointer;
+}
+
+button:hover{
+    height: 4.1vh;
+    cursor: pointer;
+    background-color: #c9b0b0;
+    border: none;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid brown; */
+    height: 3vh;
+    width: 25vw;
+    font-size: smaller;
+    justify-content: flex-start;
+}
+
+.check {
+    background-color: aliceblue;
+    color: aliceblue;
+    height: 2vh;
+    margin-left: -12rem;
+}
+
+.read{
+    margin-left: -10rem;
+    color: #8e7272;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(200, 121, 121);
+    font-size: .8rem;
+}
+
+.connect{
+    display: flex;
+    gap: 5px;
+}
+
+.insta img{
+    width: 5vw;
+    height: 3vh;
+}
+
+.connect img{
+    height: 2.6vh;
+    width: 3vw;
+}
+
+.connect div{
+    border: 1px solid rgb(92, 92, 102);
+    height: 5vh;
+    width: 3vw;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #958f95;
+}
+
+hr{
+    align-self:center;
+    text-decoration: color(srgb red green blue);
+    width: 80%;
+    height: 1px;
+    background-color: #6c5a5a;
+    border: none;
+}
+
+.footer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    gap: 8rem;
+    /* border: 1px solid black; */
+    height: 60vh;
+    width: 70vw;
+}
+
+.ft1{
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+}
+
+.ft2{
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+}
+
+.ft3{
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+}
+
+.ft4{
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+}
+
+.ftfonts{
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+.ftsmall{
+    color: #958f95;
+    gap: .8rem;
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+}
+
+.ftsmally:hover{
+    color: #958f95;
+    text-decoration: underline;
+}
+
+.lastfotr{
+    display: flex;
+    justify-content: space-around;
+    gap: 39rem;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.lastfotr img{
+    height: 3vh;
+    width: 2vw;
+    border-radius: 2rem;
+}
+
+.country{
+    display: flex;
+    gap: 1rem;
+}
+
+.main{
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.bignav{
+    height: 12.1vh;
+}
+
+input{
+    width: 15vw;
+    font-size: 1.2vw;
+}
+
+ .head5, .head6 {
+    width: 100%;
+ height: 40vh;
+    box-sizing: border-box;
+    background-size: cover !important;
+}
+
+.follow-insta, .get-inbox {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        align-items: center;
+    }
+
+    .none{
+        /* display: none; */
+        font-size: 0;
+    }
+
+/* ======================================
+   RESPONSIVE MEDIA QUERIES
+   ====================================== */
+
+@media (max-width: 768px) {
+    
+    /* Show hamburger menu */
+    .hamburger {
+        order: -1;
+        display: flex;
+        z-index: 1001;
+    }
+    .nav{
+        display: none;
+    }
+    /* Hide nav2-2 by default on mobile */
+    .nav2-2 {
+        display: none;
+        position: absolute;
+        top: 6.5vh;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        padding: 2vh 0;
+        gap: 1vh;
+        text-align: center;
+        font-size: 4vw;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked ~ .nav2-2 {
+        display: flex;
+    }
+    
+    /* Animate hamburger to X when checked */
+    #menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    
+    #menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    .bignav {
+        height: auto;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 1vh;
+        padding: 1vh 3vh;
+        height: auto;
+    }
+    
+    .navpart2 {
+        order: 2;
+    }
+    
+    .navpart1 {
+        order: 1;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .navpart1-1 svg {
+        width: 20vw;
+    }
+
+    .nav2 {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1vh 3vw;
+        height: auto;
+        position: relative;
+    }
+
+    input {
+        width: 40vw;
+        font-size: 3vw;
+        background-size: 4vw;
+    }
+    
+    .navpart2-1 img, .navpart2-2 img {
+        height: 4vh;
+    }
+
+    .WATCH{
+        height: 4vh;
+        width: 29vw;
+    }
+    .head2 img{
+      
+        height: 50%;
+    }
+
+   .header{
+    height: 60vh;
+   }
+
+   .header5{
+   height: 50vh;
+   
+   display: flex;
+   }
+
+   .header6{
+   height: 4vh;
+   
+   }
+
+   .home{
+    height: 5vh;
+   }
+   
+.home2{
+    height: 10vh;
+    font-size: 2.6vw;
+    color: black;
+    font-weight: bold;
+}
+
+.click{
+    display: flex;
+    gap: 2vw;
+}
+.arrow img{
+    height: 2.4vh;
+    width: 4vw;
+}
+.invideo button:hover{
+     width: 14vw;
+   height: 5.5vh;
+   border-radius: 1vw;
+   outline: none;
+   border: none;
+   font-weight: bold;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+.all{
+    font-size: 1.3rem;
+}
+.year{
+    font-size: 0.7rem;
+}
+
+    .footer {
+        /* border: #ce1b2c; */
+        height: 190vh;
+    }
+    
+    .footer1{
+        height: 100vh;
+    }
+   .checkbox{
+    display: flex;
+   }
+    .check,.read{
+        margin-left: -5vw;
+    }
+    .footer2 {
+        width: 95vw;
+        height: 170vh;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .ft1, .ft2, .ft3, .ft4 {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .ftsmall {
+        align-items: center;
+    }
+
+    .texts{
+        text-align: center;
+    }
+    .Join {
+        width: 90vw;
+    }
+    
+    .Join input {
+        width: 90%;
+    }
+    
+    button {
+        width: 15vw;
+    }
+
+    
+    .lastfotr {
+        display: flex;
+        gap: 10px;
+       align-items: center;
+        gap: 1rem;
+        text-align: center;
+        /* border: 1px solid black; */
+        height: 18vh;
+        font-size: 3vw;
+        width: 100vw;
+    }
+
+    .country{
+        align-items: center;
+        font-size: 3vw;
+        color: #e9acb5;
+    }
+
+    .bicy{
+        align-items: center;
+        font-size: 3vw;
+        color: #e9acb5;
+    }
+    
+    .lastfotr img {
+        width: 5vw;
+        /* border: 1px solid black; */
+        
+    }
+
+    .OUR{
+        font-size: 28px;
+    }
+
+    .TREK {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .head6-1{
+        font-size: 40px;
+    }
+
+    .follow-insta, .get-inbox {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.63rem;
+        align-items: center;
+
+    }
+
+    .sign{
+        font-size: 7vw;
+    }
+    .get{
+        font-size: 3vw;
+    }
+    .checkbox{
+        /* border: 1px solid black; */
+        width: 90vw;
+        height: 3vh;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .check,.read{
+        margin-left: -35vw;
+    }
+
+   
+    .connect div{
+        height: 4vh;
+        width: 6vw;
+    }
+    
+     .none{
+        display: contents;
+    }
+    .None{
+        display: none;
+    }
+    .down{
+        display: flex;
+        flex-direction: column;
+    }
+}

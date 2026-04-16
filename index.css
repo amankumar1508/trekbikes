@@ -1,0 +1,749 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #474747;
+    overflow-x: hidden;
+}
+
+.main{
+    width: 100%;
+    max-width: 100vw;
+}
+
+.bignav{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: rgb(26, 48, 48);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.nav{
+    width: 100%;
+    background-color:#474747;
+    padding: 1vh 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}
+
+.navpart1{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.navpart1-1 svg{
+    height: 2vh;
+    width: 6vw;
+    min-width: 60px;
+}
+
+.navpart2{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.navpart2-1 img{
+    height: 3vh;
+    min-height: 25px;
+    border-radius: 50%;
+}
+
+.navpart2-2 img{
+    height: 3vh;
+    min-height: 25px;
+    border-radius: 50%;
+    filter: invert(1) brightness(2);
+}
+
+.nav2{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    justify-content: space-between;
+    padding: 1.5vh 2vw;
+    min-height: 60px;
+} 
+
+.nav2 img{
+    filter: invert(1) brightness(2);
+}
+
+.nav2-2{
+    display: flex;
+    gap: 1.5vw;
+    font-size: 1vw;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.underline{
+    text-decoration: none;
+    color: aliceblue;
+    transition: all .1s ease-in-out;
+}
+
+.underline:hover{
+    text-decoration: underline red 1px;
+    text-underline-offset: .7vw;
+    transform: translateY(-2px);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+input[type="text"],
+input[type="email"]{
+    background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat 1vw center;
+    background-size: 1.3vw;
+    height: 4.1vh;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(234, 237, 240);
+    font-size: 1vw;
+    filter: invert(1) brightness(2);
+    outline: none;
+    border: 1px solid rgb(125, 59, 59);
+    width: 12vw;
+    min-width: 150px;
+    padding: 0 2vw;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover{
+    background-color: aliceblue;
+    color: rgb(239, 237, 237);
+    filter: none;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+video{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.video-container{
+    position: relative;
+    width: 100%;
+}
+
+.invideo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #c9b0b0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    gap: 9px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.invideo button{
+    width: 14vw;
+    min-width: 180px;
+    height: 5.5vh;
+    min-height: 45px;
+    border-radius: 1vw;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.invideo button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.all{
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+.year{
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    text-align: center;
+}
+
+.head2, .head3, .head4, .head5, .head6{
+    width: 100%;
+    max-width: 2332px;
+    background-size: cover;
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.head2{
+    background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/marqueeBG-century-challenge-pune");
+    color: aliceblue;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    gap: 20px;
+}
+
+.head2 img{
+    max-width: 90%;
+    height: auto;
+    max-height: 300px;
+}
+
+.head3{
+    background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/marquee-Randonneur-24");
+    color: rgb(212, 226, 241);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.border{
+    background-color: pink;
+    height: auto;
+    padding: 15px 30px;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: lighter;
+    color: black;
+    border-radius: .6rem;
+    cursor: pointer;
+}
+
+.head4{
+    background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/2019-05-08_Precal_Lifestyle_Shoot939");
+    gap: 1rem;
+}
+
+.pre{
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.mem{
+    color: aliceblue;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.see{
+    padding: 15px 40px;
+    border-radius: 1rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: bold;
+    background-color: rgb(219, 221, 224);
+    cursor: pointer;
+}
+
+.head5{
+    background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/JB-Sustainability_homepage");   
+    text-align: center;
+    gap: 20px;
+}
+
+.OUR{  
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: aliceblue;
+}
+
+.TREK{
+    font-size: clamp(1rem, 2vw, 1.7rem);
+    color: white;
+}
+
+.WATCH{
+    padding: 15px 40px;
+    background-color: aliceblue;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    border-radius: .4rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+.head6{
+    background-image: url("https://media.trekbikes.com/image/upload/w_1440,c_fill,f_auto,fl_progressive:semi,q_auto/TK20_WEB_Home_marquee_ROW_IG5v2");
+    gap: 20px;
+}
+
+.head6-1{
+    font-weight: bold;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: aliceblue;
+    text-align: center;
+}
+
+.head6-2{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.FOLLOW{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.head6-2 div{
+    border-radius: 7px;
+    background-color: aliceblue;
+    padding: 15px 30px;
+    color: rgb(44, 65, 84);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+/* FOOTER STYLES */
+.footer{
+    width: 100%;
+    background-color: #474747;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.footer1{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sign{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    color: white;
+    text-align: center;
+}
+
+.get{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: rgb(157, 114, 114);
+    text-align: center;
+}
+
+.Join{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.join1{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.Join input[type="email"]{
+    flex: 1;
+    background-image: none;
+    border: 1px solid rgb(225, 195, 195);
+    background-color: transparent;
+    color: white;
+    min-width: 0;
+    width: auto;
+}
+
+.Join input[type="email"]:hover{
+    background-color: transparent;
+    color: whitesmoke;
+    border: 1px solid rgb(211, 197, 197);
+}
+
+button{
+    height: auto;
+    padding: 10px 20px;
+    min-height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: #c9b0b0;
+}
+
+.checkbox{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+}
+
+.check {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.read{
+    color: #8e7272;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex: 1;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(200, 121, 121);
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+.connect{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.connect div{
+    border: 1px solid rgb(92, 92, 102);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #958f95;
+    cursor: pointer;
+}
+
+.connect img{
+    height: 24px;
+    width: 24px;
+}
+
+.insta img{
+    width: 24px;
+    height: 24px;
+}
+
+hr{
+    width: 90%;
+    max-width: 1200px;
+    height: 1px;
+    background-color: #6c5a5a;
+    border: none;
+}
+
+.footer2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.ft1, .ft2, .ft3, .ft4{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ftfonts{
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+} 
+
+.ftsmall{
+    color: #958f95;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+}
+
+.ftsmally{
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.ftsmally:hover{
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+.lastfotr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.country{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.lastfotr img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+@media (max-width: 1024px) {
+    .nav2-2 {
+        font-size: 1.2vw;
+        gap: 2vw;
+    }
+    
+    .footer2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .nav{
+        flex-direction: row;
+    }
+    
+    .nav{
+        display: none;
+    }
+    .hamburger{
+        order: -1;
+    }
+    .nav2-2 {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+        font-size: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    #menu-toggle:checked ~ .nav2-2 {
+        display: flex;
+    }
+    
+    #menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    
+    #menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    .nav2 {
+        position: relative;
+    }
+
+    input[type="text"] {
+        width: 150px;
+        font-size: 14px;
+    }
+ .join1 input{
+    font-size: 2vw;
+ }
+    .footer2 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .ft1, .ft2, .ft3, .ft4 {
+        align-items: center;
+    }
+    
+    .lastfotr {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .checkbox {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .invideo button {
+        min-width: 200px;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding: 10px 15px;
+    }
+
+    .nav2 {
+        padding: 15px;
+    }
+
+    .navpart1-1 svg {
+        width: 80px;
+    }
+
+    .invideo {
+        gap: 15px;
+    }
+
+    .invideo button {
+        width: 60vw;
+        max-width: 250px;
+        font-size: 14px;
+    }
+
+    .border {
+        width: 80%;
+        padding: 12px 20px;
+        font-size: 1.2rem;
+    }
+
+    .see {
+        width: 70%;
+        padding: 12px 20px;
+    }
+
+    .WATCH {
+        width: 60%;
+        padding: 12px 20px;
+    }
+
+    .head6-2 div {
+        width: 80%;
+        padding: 12px 20px;
+    }
+
+    .Join {
+        width: 100%;
+    }
+
+    .join1 {
+        flex-direction: column;
+    }
+
+    .Join input[type="email"] {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .connect div {
+        height: 45px;
+        width: 45px;
+    }
+
+    .footer2 {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .sign {
+        font-size: 1.8rem;
+    }
+
+    .get {
+        font-size: 0.85rem;
+    }
+
+    .texts {
+        font-size: 0.7rem;
+    }
+}
